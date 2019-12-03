@@ -18,6 +18,9 @@ def directors_totals(nds)
   #
   #
   # Be sure to return the result at the end!
-  
+   result = {}
+  director_index = 0
+@@ -12,6 +14,8 @@ def directors_totals(source)
+  result
   nil
 end
