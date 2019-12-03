@@ -21,20 +21,20 @@ require 'directors_database'
  def directors_totals(nds)
   result = {}
   nil
-  i = 0
-  while i < nds.size do
-    director = nds[i]
+  count = 0
+  while count < nds.size do
+    director = nds[count]
     result[director[:name]] = gross_for_director(director)
-    i += 1
+    count += 1
   end
   result
 end
 def gross_for_director(director_data)
-  i = 0
+  count = 0
   total = 0
-  while i < director_data[:movies].length do
-  total += director_data[:movies][i][:worldwide_gross]
-  i += 1
+  while count < director_data[:movies].length do
+  total += director_data[:movies][count][:worldwide_gross]
+  count += 1
   end
 total
 end
